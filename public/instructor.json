@@ -1,0 +1,122 @@
+[
+    {
+      "name": "John Smith",
+      "_id": 1,
+      "img": "https://i.ibb.co/8n3pfkc/first.png",
+      "courses": 
+        {
+          "name": "Web Development Fundamentals",
+          "details": "This course covers the basics of web development, including HTML, CSS, and JavaScript. Students will learn to build static websites and understand fundamental concepts of front-end development."
+        },
+      "details": "John Smith is an experienced web developer with expertise in front-end and back-end technologies. He has a passion for teaching and has helped numerous students master web development skills."
+    },
+    {
+      "name": "Alice Johnson",
+      "_id": 2,
+      "img": "https://i.ibb.co/vsDQv0M/second.png",
+      "courses":
+        {
+          "name": "English Teaching",
+          "details": "This course focuses on effective English teaching methodologies. Students will learn strategies for language instruction, classroom management, and engaging language learners."
+        },
+     
+      "details": "Alice Johnson is a language educator with a background in English teaching. She enjoys sharing her knowledge with aspiring language instructors."
+    },
+    {
+      "name": "Danial Williams",
+      "_id": 3,
+      "img": "https://i.ibb.co/YT5hPsG/third.png",
+      "courses":
+        {
+          "name": "App Development Fundamentals",
+          "details": "This course provides a foundation in mobile app development, covering React Native and iOS development. Students will learn to create user-friendly and innovative mobile applications."
+        },
+     
+      "details": "David Williams is a seasoned mobile app developer specializing in React Native and iOS development. He loves building innovative and user-friendly mobile applications."
+    },
+    {
+      "name": "Emily Rodriguez",
+      "_id": 4,
+      "img": "https://i.ibb.co/Vt0m9Kc/fourth.png",
+      "courses":
+        {
+          "name": "Graphic Design Principles",
+          "details": "This course explores the principles of graphic design, including layout, typography, and color theory. Students will unleash their creativity through hands-on design projects."
+        },
+     
+      "details": "Emily Rodriguez is a talented graphic designer with a keen eye for aesthetics. She is passionate about helping students unleash their creativity through graphic design."
+    },
+    {
+      "name": "Michael Chen",
+      "_id": 5,
+      "img": "https://i.ibb.co/WxFzxmp/fifth-1.png", 
+      "courses":
+        {
+          "name": "Digital Marketing Fundamentals",
+          "details": "This course delves into the fundamentals of digital marketing, covering strategies, analytics, and social media. Students will gain practical skills for successful online marketing campaigns."
+        },
+     
+      "details": "Michael Chen is a cybersecurity expert with hands-on experience in ethical hacking. He is dedicated to teaching students about cybersecurity best practices and techniques."
+    },
+    {
+      "name": "Sophia Lee",
+      "_id": 6,
+      "img": "https://i.ibb.co/Gd3THxv/seventh.png",
+      "courses":
+        {
+          "name": "Back-end Developer",
+          "details": "This course focuses on back-end development technologies and principles. Students will learn to build server-side applications and databases, gaining essential skills for full-stack development."
+        },
+     
+      "details": "Sophia Lee is an AI enthusiast and machine learning expert. She enjoys simplifying complex AI concepts and making them accessible to students of all levels."
+    },
+    {
+      "name": "Brian Turner",
+      "_id": 7,
+      "img": "https://i.ibb.co/xJX6tnR/eight.png",
+      "courses":
+        {
+          "name": "Management Web Application",
+          "details": "This course explores the development and management of web applications for business. Students will learn to build scalable and efficient web solutions for various business needs."
+        },
+     
+      "details": "Brian Turner is a digital marketing guru with a focus on social media advertising. He has a proven track record of successful marketing campaigns and loves sharing his insights with students."
+    },
+    {
+      "name": "Jessica Martinez",
+      "_id": 8,
+      "img": "https://i.ibb.co/DfTh6cj/tenth.png",
+      "courses":
+        {
+          "name": "Physics Teaching",
+          "details": "This course covers fundamental principles of physics education. Students will gain insights into effective teaching methods, curriculum development, and engaging physics lessons."
+        },
+     
+      "details": "Jessica Martinez is a business analytics expert with a background in finance. She is passionate about helping students leverage data for strategic decision-making in business."
+    },
+    {
+      "name": "Joshi Notrhia",
+      "_id": 9,
+      "img": "https://i.ibb.co/j3b7Cdt/eleventh.png",
+      "courses":
+        {
+          "name": "Psychology Teacher",
+          "details": "This course explores psychology education, covering key concepts, teaching methodologies, and practical applications. Students will gain a deeper understanding of psychology and effective teaching strategies."
+        },
+     
+      "details": "Jessi Notrhia is a psychology educator with a passion for teaching and helping students understand the complexities of human behavior."
+    },
+    {
+      "name": "Jhon Shuvro",
+      "_id": 10,
+      "img": "https://i.ibb.co/r6tZcfN/sixth-1.png",
+      "courses":
+        {
+          "name": "Help Line Manager",
+          "details": "This course explores the role of a help line manager in providing effective support and assistance. Students will gain insights into help desk management, customer service, and problem-solving."
+        },
+     
+      "details": "Jhon Shuvro is an experienced help line manager with a focus on customer satisfaction. He is passionate about teaching students the skills needed for successful help line management."
+    }
+  ]
+  

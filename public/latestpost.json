@@ -1,0 +1,23 @@
+[
+    {
+        "_id": "643010e0f5a7e52ce1e8fa651a",
+        "img": "https://i.ibb.co/tCk8Jyd/blogs.png",
+        "name": "Summer Course Starts From 1st June",
+        "details": "Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "date": "12.02.2023"
+    },
+    {
+        "_id": "643010f9f5a7e52ce1e8fa661b",
+        "img": "https://i.ibb.co/bXHdgz5/New-Project-1.png",
+        "name": "Guest Interview will Occur Soon in the Auditorium About Artificial Intelligence",
+        "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)",
+        "date": "12.02.2023"
+    },
+    {
+        "_id": "6430110af5a7e52ce1e8fa671c",
+        "img": "https://i.ibb.co/jfFrwNR/New-Project-2.png",
+        "name": "Add new Job Placement for our students",
+        "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)",
+        "date": "12.02.2023"
+    }
+]

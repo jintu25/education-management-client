@@ -1,0 +1,32 @@
+/* swiper slider design */ 
+/* add image background for banner slider */
+.first{
+    /* background-image: url('../../../assets//images/banner/chapter_pic02-1.webp'); */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../assets//images/banner/chapter_pic02-1.webp');
+  color: white;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+  background-position: center center;
+
+}
+
+.second{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../assets//images/banner/istockphoto-1046140892-170667a.jpg');
+  color: white;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+  background-position: center center;
+}
+.third{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../assets//images/banner/what-are-the-good-habit-of-reading-1024x538.png');
+  color: white;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+  background-position: center center;
+}

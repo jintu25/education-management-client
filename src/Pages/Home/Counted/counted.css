@@ -1,0 +1,10 @@
+.counted-banner{
+    background: linear-gradient(rgba(37, 30, 56, 0.753), rgba(6, 17, 32, 0.884)), url('../../../assets/images/other/students.jpg');
+    background-attachment: fixed;
+  color: white;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 100px 0px;
+  background-size: cover;
+  background-position: center center;
+}
