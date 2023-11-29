@@ -35,7 +35,7 @@ const Banner = () => {
                 enhancing your computer skills is crucial for personal and
                 professional growth.
               </p>
-              <button className="bg-gradient-to-r from-red-500 via-orange-500 to-yellow-300 text-white py-2 px-3 rounded text-lg font-bold">
+              <button className="bg-gradient-to-r from-red-500 via-orange-500 to-yellow-300 text-white py-2 px-6 rounded text-lg font-bold">
                 Get More
               </button>
             </div>
@@ -52,7 +52,7 @@ const Banner = () => {
                 acquiring information but an opportunity for personal growth and
                 knowledge enrichment.
               </p>
-              <button className="bg-gradient-to-r from-red-500 via-orange-500 to-yellow-300 text-white py-2 px-3 rounded text-lg font-bold">
+              <button className="bg-gradient-to-r from-red-500 via-orange-500 to-yellow-300 text-white py-2 px-6 rounded text-lg font-bold">
                 Get More
               </button>
             </div>

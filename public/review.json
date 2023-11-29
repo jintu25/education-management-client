@@ -2,30 +2,35 @@
     {
         "_id": "643010e0f5a7e52ce1e8fa65",
         "name": "Jane Doe",
-        "details": "Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "img": "https://i.ibb.co/5619nw0/New-Project-2023-04-09-T185932-610.png",
+        "details": "I recently completed an online course on eSmart and I can't express how impressed I am with the overall experience. The course content was not only comprehensive but also delivered in a way that made complex concepts easy to understand.",
         "rating": 3
     },
     {
         "_id": "643010f9f5a7e52ce1e8fa66",
-        "name": "John Doe",
-        "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)",
+        "name": "John Shuno",
+        "img": "https://i.ibb.co/jGsf9fZ/sports-photography-P4a-690x450-jpg-img.jpg",
+        "details": "The instructors demonstrated a deep understanding of the subject matter, and their passion for teaching was evident in every module. The lessons were well-structured, engaging, and supported by practical examples that enhanced my learning.",
         "rating": 2
     },
     {
         "_id": "6430110af5a7e52ce1e8fa67",
         "name": "MJ Doe",
-        "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)",
+        "img": "https://i.ibb.co/Z8GhZXb/New-Project-2023-04-09-T230809-399.png",
+        "details": "The support from the course instructors and the responsive customer service team further contributed to the positive experience. Any questions or concerns I had were addressed promptly, making me feel valued as a learner.",
         "rating": 5
     },
     {
         "_id": "64301123f5a7e52ce1e8fa68",
         "name": "Sarah Smith",
-        "details": "I found the product to be incredibly useful and easy to use. The interface is intuitive, and it has all the features I need. Highly recommend it!",
+        "img": "https://i.ibb.co/wNt0JYd/doc6.jpg",
+        "details": "Feel free to customize the review based on your specific experience and the key features of the online course. This example covers aspects such as course content, instructor quality, platform usability, and overall satisfaction, but you can adjust it to match your unique experience.",
         "rating": 4
     },
     {
         "_id": "6430113af5a7e52ce1e8fa69",
         "name": "Robert Johnson",
+        "img": "https://i.ibb.co/wzC8XPp/doc4.jpg",
         "details": "This is by far the best service I have ever used. The customer support is outstanding, and the product itself is top-notch. I couldn't be happier!",
         "rating": 5
     }

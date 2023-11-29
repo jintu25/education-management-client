@@ -1,18 +1,18 @@
 import { FaHeartBroken } from "react-icons/fa";
 import { LuUsers2 } from "react-icons/lu";
+import { Link } from "react-router-dom";
 
 const Course = ({ course }) => {
-  const { name, courseDescription, image, price, otherInfo } = course;
-  console.log(course);
+  const { name, courseDescription, image, price, otherInfo, _id } = course;
 
   return (
     <div className="border border-slate-200 shadow-xl rounded-xl">
       <img className=" rounded-t-xl" src={image} alt="" />
       <div className="p-5 border-b-2 border-slate-300 text-center">
-        <h1 className="text-[#002147] font-medium font-[roboto] text-2xl my-2">
+        <Link to={`/detailsCourse/${course._id}`} className="text-[#002147] font-medium font-[roboto] text-2xl my-2 hover:text-[#fc6552] ease-in-out duration-300">
           {name}
-        </h1>
-        <p className="text-[16px] font-normal font-serif text-slate-700">
+        </Link>
+        <p className="text-[16px] font-normal mt-3 font-serif text-slate-700">
           {courseDescription.length > 80
             ? `${courseDescription.substring(0, 80)}...`
             : courseDescription}

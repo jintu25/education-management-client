@@ -25,7 +25,6 @@ const Instructors = () => {
         setInstructors(data);
       });
   }, []);
-  console.log("instructor", instructors.name);
   return (
     <div className=" m-auto max-w-screen-xl my-20">
         <h4 className="font-[roboto] text-center mb-3 text-[#333333] text-3xl font-semibold">Our Expert Instructors</h4>

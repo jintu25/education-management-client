@@ -12,6 +12,7 @@ const Upcoming = ({ upcoming }) => {
           <Link className="text-[#002147] text-xl hover:text-[#fdc800] ease-in-out duration-300 font-semibold font-[sans-serif]">
             {name}
           </Link>
+          
           <h5 className="text-[18px] font-medium text-[#555555] my-2">
             {date}
           </h5>

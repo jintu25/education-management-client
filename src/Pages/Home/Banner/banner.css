@@ -1,7 +1,6 @@
 /* swiper slider design */ 
 /* add image background for banner slider */
 .first{
-    /* background-image: url('../../../assets//images/banner/chapter_pic02-1.webp'); */
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../assets//images/banner/chapter_pic02-1.webp');
   color: white;
   background-repeat: no-repeat;

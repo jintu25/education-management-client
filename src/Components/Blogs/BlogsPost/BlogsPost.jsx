@@ -16,7 +16,7 @@ const BlogsPost = () => {
   }, []);
 
   useEffect(() => {
-    fetch("/upcoming.json")
+    fetch("http://localhost:5000/events")
       .then((res) => res.json())
       .then((data) => {
         setUpcomingEvents(data);
@@ -34,12 +34,12 @@ const BlogsPost = () => {
               <LatestPost blog={blog} key={blog._id}></LatestPost>
             ))}
             <div className="w-full flex justify-center mt-10">
-              <a
+              <Link to='/blogs'
                 href="#"
                 className="flex text-gray-100 justify-center transition duration-200 ease-in-out transform px-4 py-2 w-48 border-b-4 border-gray-500 hover:border-b-2 bg-gradient-to-t from-gray-400  via-gray-600 to-gray-200 rounded-2xl hover:translate-y-px "
                         >
                 <span className="font-bold">Read More</span>
-              </a>
+              </Link>
             </div>
           </div>
           <div>
@@ -50,12 +50,12 @@ const BlogsPost = () => {
               <Upcoming upcoming={upcoming} key={upcoming._id}></Upcoming>
             ))}
             <div className="w-full flex justify-center mt-10">
-              <a
+              <Link to='/events'
                 href="#"
                 className="flex text-gray-100 justify-center transition duration-200 ease-in-out transform px-4 py-2 w-48 border-b-4 border-gray-500 hover:border-b-2 bg-gradient-to-t from-gray-400  via-gray-600 to-gray-200 rounded-2xl hover:translate-y-px "
                         >
                 <span className="font-bold">Read More</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
