@@ -1,3 +1,4 @@
+import AboutUs from "../../../Components/AboutUs/AboutUs";
 import BlogsPost from "../../../Components/Blogs/BlogsPost/BlogsPost";
 import Banner from "../Banner/Banner";
 import Counted from "../Counted/Counted";
@@ -11,6 +12,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <Elementor></Elementor>
+            <AboutUs></AboutUs>
             <Courses></Courses>
             <Counted></Counted>
             <Instructors></Instructors>

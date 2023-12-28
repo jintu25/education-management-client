@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Upcoming = ({ upcoming }) => {
   const { name, img, date, details } = upcoming;
   return (
-    <div className=" border-b-2 bg-white p-3">
+    <div className=" border-b-2 p-3">
       <div className="grid-container grid grid-cols-6 mb-4 gap-6 items-center py-3">
         <div className="col-span-2">
           <img className=" h-32 w-40" src={img} alt="" />
@@ -13,9 +13,9 @@ const Upcoming = ({ upcoming }) => {
             {name}
           </Link>
           
-          <h5 className="text-[18px] font-medium text-[#555555] my-2">
+          <h2 className="text-[18px] font-medium text-[#555555] my-2">
             {date}
-          </h5>
+          </h2>
           <p className="text-[16px] font-normal font-serif text-slate-700">
             {details.length > 80 ? `${details.substring(0, 80)}...` : details}
           </p>

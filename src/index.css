@@ -5,3 +5,52 @@
 .drawer-side a.active {
     color: red;
   }
+
+
+  :root {
+    --background-light: #ffffff;
+    --text-light: #333333;
+    --background-dark: #1a1a1a;
+    --text-dark: #ffffff;
+  }
+  
+  .light {
+    background-color: #ffffff;
+    color: #333333;
+    /* Add other light theme styles */
+  }
+  
+  .dark {
+    background-color: #000223;
+    color: #ffffff;
+    /* Add other dark theme styles */
+  }
+  /* about us pages */
+  .dark h1{
+    color: rgb(221, 221, 221);
+  }
+  .dark li{
+    color: rgb(185, 186, 187);
+  }
+  .dark h2{
+    color: rgb(185, 186, 187);
+  }
+  .dark p{
+    color: rgb(172, 172, 172);
+  }
+  .dark a{
+    color: rgb(201, 197, 197);
+  }
+
+  .dark label{
+    color: rgb(194, 194, 194);
+  }
+  .dark span{
+    color: #ffffff;
+  }
+  .dark input{
+    color: rgb(37, 37, 37);
+  }
+  .dark h4{
+    color: rgb(37, 37, 37);
+  }

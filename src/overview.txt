@@ -99,3 +99,13 @@ Before implementing these features, it's crucial to consult with stakeholders (s
 // optional
 5. student caile teacher er sate jugajug korte parbe otha optional 
 
+
+
+
+
+some component or Library use : => why use 
+tanstack query: =>  when our website is refresh or delete use tanstack query use 
+karon ekane easy way te delete and edit er jonno refetch use kore use kora jay
+// axios why and when i use axios
+amra jokon post method use kori tokon eita ke onek tai sohoj kore dite pare axios.
+axios use korle post er jonno method bole dite hoy na headers use korte hoy na. jar jonno onek code er dorkar oy na.

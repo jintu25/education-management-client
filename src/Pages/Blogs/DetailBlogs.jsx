@@ -7,11 +7,11 @@ const DetailBlogs = ({blog}) => {
         <img className="h-[280px] w-96 text-center" src={img} alt="" />
       </div>
       <div className="col-span-3">
-        <h3 className="text-[#002147] text-xl ease-in-out duration-300 font-semibold font-[sans-serif] text-center md:text-start">
+        <h1 className="text-[#002147] text-xl ease-in-out duration-300 font-semibold font-[sans-serif] text-center md:text-start">
           {name}
-        </h3>
+        </h1>
 
-        <h5 className="text-[18px] font-medium text-[#555555] my-2 text-center md:text-start">{date}</h5>
+        <h2 className="text-[18px] font-medium text-[#555555] my-2 text-center md:text-start">{date}</h2>
         <p className="text-[16px] font-normal font-serif text-slate-700 text-center md:text-start">
           {details}
         </p>

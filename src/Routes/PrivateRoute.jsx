@@ -9,7 +9,7 @@ const PrivateRoute = ({ children }) => {
 
   if (loading) {
     return (
-      <div className="text-center">
+      <div className="text-center flex justify-center items-center">
         <Dna
           visible={true}
           height="80"

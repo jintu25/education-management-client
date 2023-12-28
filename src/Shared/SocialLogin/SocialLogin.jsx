@@ -4,15 +4,14 @@ import { useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const SocialLogin = () => {
-  const { socialLogin } = useContext(AuthContext);
+  const { socialHandler } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
 
   const handleSocialLogin = () => {
-    socialLogin().then((result) => {
+    socialHandler().then((result) => {
       const user = result.user;
-      console.log('social login user: ', user)
       Swal.fire({
         position: "center",
         icon: "success",

@@ -5,17 +5,29 @@ import SignUp from "../Pages/SignUp/SignUp";
 import Login from "../Pages/Login/Login";
 import DetailsCourse from "../Pages/Home/Courses/DetailsCourse";
 import PrivateRoute from "./PrivateRoute";
-import UserProfile from "../Pages/Dashboard/UserDashboard/userProfile";
 import Events from "../Pages/Events/Events";
 import Blogs from "../Pages/Blogs/Blogs";
 import CoursesPage from "../Pages/CoursesPage/CoursesPage";
 import DashboardLayout from "../Layout/DashboardLayout";
+import AllUsers from "../Pages/Dashboard/TeacherDashboard/AllUsers/AllUsers";
+import About from "../Pages/About/About/About";
+import NotFoundPage from "../Components/NotFoundPage/NotFoundPage";
+import ModeratorRoutes from "./ModaretorRoutes";
+import Profile from "../Pages/Dashboard/Profile/Profile";
+import AddReview from "../Pages/Dashboard/UserDashboard/AddReview";
+import Payments from "../Pages/Home/Courses/Payments/Payments";
+import EnrollCourse from "../Pages/Home/Courses/EnrollCourse";
+import EnrollStudents from "../Pages/Dashboard/TeacherDashboard/EnrollStudents/EnrollStudents";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
     children: [
+      {
+        path: "*",
+        element: <NotFoundPage></NotFoundPage>,
+      },
       {
         path: "/",
         element: <Home></Home>,
@@ -41,6 +53,10 @@ export const router = createBrowserRouter([
         element: <CoursesPage></CoursesPage>,
       },
       {
+        path: "/about",
+        element: <About></About>,
+      },
+      {
         path: "/detailsCourse/:id",
         element: (
           <PrivateRoute>
@@ -51,7 +67,7 @@ export const router = createBrowserRouter([
         loader: async ({ params }) => {
           try {
             const response = await fetch(
-              `http://localhost:5000/courses/${params.id}`
+              `https://dragon-news-server-n2l9xp6ol-jintu45.vercel.app/courses/${params.id}`
             );
             if (!response.ok) {
               throw new Error("Failed to fetch data");
@@ -64,17 +80,54 @@ export const router = createBrowserRouter([
           }
         },
       },
+      {
+        path: "/payment",
+        element: (
+          <PrivateRoute>
+            <Payments></Payments>
+          </PrivateRoute>
+        ),
+      },
     ],
   },
 
   {
-    path: 'dashboard',
-    element: <DashboardLayout></DashboardLayout>,
+    path: "dashboard",
+    element: (
+      <PrivateRoute>
+        <DashboardLayout></DashboardLayout>
+      </PrivateRoute>
+    ),
     children: [
       {
-          path: 'userprofile',
-          element: <UserProfile></UserProfile>
-      }
-    ]
-  }
+        path: "profile",
+        element: (
+          <PrivateRoute>
+            <Profile></Profile>
+          </PrivateRoute>
+        ),
+      },
+
+      {
+        path: "addreview",
+        element: (
+          <PrivateRoute>
+            <AddReview></AddReview>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "allusers",
+        element: <AllUsers></AllUsers>,
+      },
+      {
+        path: "enrollstudents",
+        element: (
+          <ModeratorRoutes>
+            <EnrollStudents></EnrollStudents>
+          </ModeratorRoutes>
+        ),
+      },
+    ],
+  },
 ]);
