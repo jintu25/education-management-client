@@ -15,14 +15,11 @@ const AllUsers = () => {
     queryKey: ["users"],
     queryFn: async () => {
       try {
-        const res = await fetch(
-          "https://dragon-news-server-n2l9xp6ol-jintu45.vercel.app/users",
-          {
-            headers: {
-              authorization: `bearer ${token}`,
-            },
-          }
-        );
+        const res = await fetch("http://localhost:5000/users", {
+          headers: {
+            authorization: `bearer ${token}`,
+          },
+        });
         const data = await res.json();
         return data;
       } catch (error) {
@@ -53,16 +50,13 @@ const AllUsers = () => {
   }
 
   const handleMakeModerator = (user) => {
-    fetch(
-      `https://dragon-news-server-n2l9xp6ol-jintu45.vercel.app/users/moderator/${user._id}`,
-      {
-        method: "PATCH",
-        headers: {
-          "content-type": "application/json",
-          authorization: `bearer ${token}`,
-        },
-      }
-    )
+    fetch(`http://localhost:5000/users/moderator/${user._id}`, {
+      method: "PATCH",
+      headers: {
+        "content-type": "application/json",
+        authorization: `bearer ${token}`,
+      },
+    })
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount > 0) {
@@ -89,16 +83,13 @@ const AllUsers = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(
-          `https://dragon-news-server-n2l9xp6ol-jintu45.vercel.app/users/${user._id}`,
-          {
-            method: "DELETE",
-            headers: {
-              "content-type": "application/json",
-              authorization: `bearer ${token}`,
-            },
-          }
-        )
+        fetch(`http://localhost:5000/users/${user._id}`, {
+          method: "DELETE",
+          headers: {
+            "content-type": "application/json",
+            authorization: `bearer ${token}`,
+          },
+        })
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount > 0) {

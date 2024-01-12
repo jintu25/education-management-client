@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const EnrollStudents = () => {
   const [enrollStudents, setEnrollStudents] = useState([]);
   useEffect(() => {
-    fetch("https://dragon-news-server-n2l9xp6ol-jintu45.vercel.app/payment")
+    fetch("http://localhost:5000/payment")
       .then((res) => res.json())
       .then((data) => {
         setEnrollStudents(data);
@@ -12,7 +12,7 @@ const EnrollStudents = () => {
 
   return (
     <div>
-      <h3 className="text-white text-3xl lg:text-4xl mb-4">Enroll Students</h3>
+      <h3 className="text-[#333] text-3xl lg:text-4xl mb-4">Enroll Students</h3>
       <div className="overflow-x-auto">
         <section className="mx-auto font-mono">
           <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
@@ -66,7 +66,7 @@ const EnrollStudents = () => {
                   </tr>
                 ))}
               </tbody>
-            </table>
+            </table> 
           </div>
         </section>
       </div>

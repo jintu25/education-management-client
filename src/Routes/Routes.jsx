@@ -67,7 +67,7 @@ export const router = createBrowserRouter([
         loader: async ({ params }) => {
           try {
             const response = await fetch(
-              `https://dragon-news-server-n2l9xp6ol-jintu45.vercel.app/courses/${params.id}`
+              `http://localhost:5000/courses/${params.id}`
             );
             if (!response.ok) {
               throw new Error("Failed to fetch data");

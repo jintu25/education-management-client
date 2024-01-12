@@ -3,6 +3,8 @@ import { AiFillGolden, AiFillHome, AiOutlineMenuUnfold } from "react-icons/ai";
 import { BiMenu, BiPhoneCall } from "react-icons/bi";
 import { FaUtensils, FaUsers, FaListUl } from "react-icons/fa";
 import useModerator from "../Hooks/useModerator";
+import { FaGraduationCap } from "react-icons/fa6";
+import { IoBookSharp } from "react-icons/io5";
 
 const DashboardLayout = () => {
   // const isModerator = useState(true)
@@ -10,7 +12,7 @@ const DashboardLayout = () => {
 
   return (
     <div className="">
-      <div className="drawer lg:drawer-open bg-gradient-to-r from-[#051129] via-[#00172b] to-[#00030f]">
+      <div className="drawer lg:drawer-open">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col p-5 px-2 md:py-10 md:px-6 ">
           {/* Page content here */}
@@ -45,7 +47,7 @@ const DashboardLayout = () => {
                     className="text-lg font-semibold text-slate-200 flex"
                   >
                     <span>
-                      <FaUtensils></FaUtensils>
+                      <IoBookSharp />
                     </span>
                     Add Courses
                   </NavLink>
@@ -78,7 +80,7 @@ const DashboardLayout = () => {
                     className="text-lg font-semibold text-slate-200 flex"
                   >
                     <span>
-                      <FaUtensils></FaUtensils>
+                      <FaGraduationCap />
                     </span>
                     Enroll Students
                   </NavLink>
@@ -176,7 +178,7 @@ const DashboardLayout = () => {
                 <span>
                   <AiFillGolden></AiFillGolden>
                 </span>
-                Order
+                Events
               </NavLink>
             </li>
 

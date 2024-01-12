@@ -25,6 +25,7 @@
     "react-icons": "^4.11.0",
     "react-loader-spinner": "^5.4.5",
     "react-router-dom": "^6.18.0",
+    "react-stars": "^2.2.5",
     "sort-by": "^1.2.0",
     "sweetalert2": "^11.10.1",
     "swiper": "^11.0.4"

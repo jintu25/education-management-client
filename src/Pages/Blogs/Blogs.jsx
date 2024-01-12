@@ -7,7 +7,7 @@ const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
   const { theme } = useContext(ThemeContext);
   useEffect(() => {
-    fetch("https://dragon-news-server-n2l9xp6ol-jintu45.vercel.app/blogs")
+    fetch("http://localhost:5000/blogs")
       .then((res) => res.json())
       .then((data) => {
         setBlogs(data);

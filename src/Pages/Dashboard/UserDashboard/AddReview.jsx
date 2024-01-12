@@ -1,89 +1,110 @@
-import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { useContext, useState } from 'react';
+import ReactStars from 'react-stars';
+import { AuthContext } from '../../../Providers/AuthProviders';
+import Swal from 'sweetalert2';
+// import Swal from 'sweetalert2';
 
 const AddReview = () => {
-  const [review, setReview] = useState({
-    name: '',
-    comment: '',
-    rating: 0,
-  });
+  const { user } = useContext(AuthContext)
+  const {
+    register,
+    handleSubmit,
+    reset,
+    // formState: { errors },
+  } = useForm();
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setReview((prevReview) => ({
-      ...prevReview,
-      [name]: value,
-    }));
+  const [ratings, setRatings] = useState(0) 
+  
+  const ratingChanged = (newRating) => {
+    setRatings(newRating);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Add your logic to handle the review submission (e.g., API call, state update, etc.)
+  const onSubmit = (data) => {
+    const { name, details } = data;
+    const reviews = { name, details, img: user?.photoURL, rating: ratings };
+    console.log(reviews);
+
+    fetch("http://localhost:5000/reviews", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+        authorization: `bearer ${localStorage.getItem("access-token")}`,
+      },
+      body: JSON.stringify(reviews),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        reset();
+        if (result.insertedId) {
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Thank you for your review...",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        }
+      });
   };
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <form
-        onSubmit={handleSubmit}
-        className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 max-w-md w-full"
-      >
+        onSubmit={handleSubmit(onSubmit)}
+        className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 max-w-md w-full">
         <h2 className="text-2xl font-bold mb-6 text-center">Add Review</h2>
 
         <div className="mb-4">
-          <label htmlFor="name" className="block text-sm font-medium text-gray-600 mb-2">
+          <label
+            htmlFor="name"
+            className="block text-sm font-medium text-gray-600 mb-2">
             Your Name
           </label>
           <input
             type="text"
             id="name"
             name="name"
-            value={review.name}
-            onChange={handleChange}
-            className="w-full p-2 border rounded-md"
-            placeholder="John Doe"
+            {...register("name", { required: true })}
+            className="w-full p-2 border rounded-md  text-slate-950"
             required
           />
         </div>
 
         <div className="mb-4">
-          <label htmlFor="comment" className="block text-sm font-medium text-gray-600 mb-2">
+          <label
+            htmlFor="comment"
+            className="block text-sm font-medium text-gray-600 mb-2">
             Comment
           </label>
           <textarea
             id="comment"
             name="comment"
-            value={review.comment}
-            onChange={handleChange}
+            {...register("details", { required: true })}
             rows="4"
             className="w-full p-2 border rounded-md"
             placeholder="Write your review here..."
-            required
-          ></textarea>
+            required></textarea>
         </div>
 
-        <div className="mb-4">
-          <label htmlFor="rating" className="block text-sm font-medium text-gray-600 mb-2">
-            Rating
-          </label>
-          <input
-            type="number"
-            id="rating"
-            name="rating"
-            value={review.rating}
-            onChange={handleChange}
-            min="0"
-            max="5"
-            className="w-full p-2 border rounded-md"
-            placeholder="Enter rating (0-5)"
-            required
+        <div className="flex">
+          <ReactStars
+            count={5}
+            onChange={ratingChanged}
+            size={40}
+            activeColor="#ffd700"
           />
         </div>
 
-        <button
-          type="submit"
-          className="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600"
-        >
-          Submit Review
-        </button>
+        <div className="col-span-2 text-right">
+          <button className="btn btn-primary">
+            <input
+              className="py-3 px-6 font-bold w-full sm:w-32 cursor-pointer"
+              type="submit"
+              value="Add Review"
+            />
+          </button>
+        </div>
       </form>
     </div>
   );

@@ -17,7 +17,7 @@
 //       queryFn: async () => {
 //         try {
 //           const res = await fetch(
-//             `https://dragon-news-server-n2l9xp6ol-jintu45.vercel.app/users/moderator/${user?.email}`,
+//             `http://localhost:5000/users/moderator/${user?.email}`,
 //             {
 //               headers: {
 //                 authorization: `bearer ${token}`,
@@ -60,7 +60,7 @@
 //     enabled: !loading && !user,
 //     queryFn: async () => {
 //       const response = await fetch(
-//         `https://dragon-news-server-n2l9xp6ol-jintu45.vercel.app/users/moderator/${user?.email}`,
+//         `http://localhost:5000/users/moderator/${user?.email}`,
 //         {
 //           headers: {
 //             authorization: `bearer ${token}`,

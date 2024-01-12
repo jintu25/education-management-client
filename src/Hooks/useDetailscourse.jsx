@@ -12,15 +12,12 @@ const useDetailsCourse = () => {
     queryKey: ["detailsCourse", user?.email],
     enabled: !loading,
     queryFn: async () => {
-      const response = await fetch(
-        `https://dragon-news-server-n2l9xp6ol-jintu45.vercel.app/courses/${id}`,
-        {
-          method: "GET",
-          headers: {
-            authorization: `Bearer ${token}`,
-          },
-        }
-      );
+      const response = await fetch(`http://localhost:5000/courses/${id}`, {
+        method: "GET",
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
+      });
       if (!response.ok) {
         throw new Error("Failed to fetch moderator status");
       }

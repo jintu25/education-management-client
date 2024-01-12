@@ -18,7 +18,7 @@ const BlogsPost = () => {
   }, []);
 
   useEffect(() => {
-    fetch("https://dragon-news-server-n2l9xp6ol-jintu45.vercel.app/events")
+    fetch("http://localhost:5000/events")
       .then((res) => res.json())
       .then((data) => {
         setUpcomingEvents(data);

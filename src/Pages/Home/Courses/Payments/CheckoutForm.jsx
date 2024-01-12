@@ -29,20 +29,17 @@ const CheckoutForm = () => {
       return;
     }
 
-    fetch(
-      "https://dragon-news-server-n2l9xp6ol-jintu45.vercel.app/create-payment-intent",
-      {
-        method: "POST",
-        headers: {
-          authorization: `Bearer ${token}`,
-          "content-type": "application/json",
-        },
-        body: JSON.stringify({
-          price: detailsCourses.price,
-          // Add other data as needed
-        }),
-      }
-    )
+    fetch("http://localhost:5000/create-payment-intent", {
+      method: "POST",
+      headers: {
+        authorization: `Bearer ${token}`,
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        price: detailsCourses.price,
+        // Add other data as needed
+      }),
+    })
       .then((res) => res.json())
       .then((data) => {
         setClientSecret(data.clientSecret);
@@ -105,7 +102,7 @@ const CheckoutForm = () => {
 
       try {
         const response = await axios.post(
-          "https://dragon-news-server-n2l9xp6ol-jintu45.vercel.app/payment",
+          "http://localhost:5000/payment",
           payment,
           {
             headers: {

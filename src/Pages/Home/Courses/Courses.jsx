@@ -9,7 +9,7 @@ const Courses = () => {
   const { theme } = useContext(ThemeContext);
   const [courses, setCourses] = useState([]);
   useEffect(() => {
-    fetch("https://dragon-news-server-n2l9xp6ol-jintu45.vercel.app/courses")
+    fetch("http://localhost:5000/courses")
       .then((res) => res.json())
       .then((data) => {
         setCourses(data);

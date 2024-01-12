@@ -41,16 +41,13 @@ const SignUp = () => {
             email: data.email,
             photoURL: data.photoURL,
           };
-          fetch(
-            "https://dragon-news-server-n2l9xp6ol-jintu45.vercel.app/users",
-            {
-              method: "POST",
-              headers: {
-                "content-type": "application/json",
-              },
-              body: JSON.stringify(saveUser),
-            }
-          );
+          fetch("http://localhost:5000/users", {
+            method: "POST",
+            headers: {
+              "content-type": "application/json",
+            },
+            body: JSON.stringify(saveUser),
+          });
           reset();
           Swal.fire({
             position: "center",

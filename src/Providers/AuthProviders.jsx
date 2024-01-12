@@ -53,7 +53,7 @@ const AuthProviders = ({ children }) => {
 
       if (currentUser) {
         axios
-          .post("https://dragon-news-server-n2l9xp6ol-jintu45.vercel.app/jwt", {
+          .post("http://localhost:5000/jwt", {
             email: currentUser.email,
           })
           .then((response) => {

@@ -14,13 +14,15 @@ import { ThemeContext } from "../../../Providers/ThemeProvider";
 const Testimonial = () => {
   const [reviews, setReviews] = useState([]);
   const { theme } = useContext(ThemeContext);
+  
   useEffect(() => {
-    fetch("https://dragon-news-server-n2l9xp6ol-jintu45.vercel.app/reviews")
+    fetch("http://localhost:5000/reviews")
       .then((res) => res.json())
       .then((data) => {
         setReviews(data);
       });
   }, []);
+
   return (
     <div className={`${theme}`}>
       <div className=" m-auto max-w-screen-xl py-20">
